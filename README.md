@@ -2,7 +2,9 @@
 
 A minimal, smooth desktop coding workspace. Near-black surfaces, a single soft accent, a Monaco editor that scrolls and breathes, and just enough chrome to get work done.
 
-![caret screenshot placeholder](./screenshot.png)
+<p align="center">
+  <img src="./screenshot.png" alt="caret" width="100%" />
+</p>
 
 ## Stack
 
