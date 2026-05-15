@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --caret-accent: #7dd3da;
+  --caret-bg: #0a0a0b;
+  --caret-panel: #101012;
+  --caret-font-sans: 'Manrope', system-ui, sans-serif;
+  --caret-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  font-family: var(--caret-font-sans);
+  font-size: 13px;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: var(--caret-bg);
+  color: #e6e6e8;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2d transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #2a2a2d;
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3d;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.titlebar-drag {
+  -webkit-app-region: drag;
+}
+.titlebar-nodrag {
+  -webkit-app-region: no-drag;
+}
+
+.monaco-editor,
+.monaco-editor * {
+  user-select: text;
+}
+
+.caret-editor-wrap .monaco-editor .cursors-layer .cursor {
+  background-color: var(--caret-cursor, #7dd3da) !important;
+  border-color: var(--caret-cursor, #7dd3da) !important;
+}
+
+.caret-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 18px;
+  background: transparent;
+  cursor: pointer;
+}
+.caret-range:focus {
+  outline: none;
+}
+.caret-range::-webkit-slider-runnable-track {
+  height: 3px;
+  background: #1f1f23;
+  border-radius: 3px;
+}
+.caret-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--caret-accent);
+  border: 2px solid #16161a;
+  margin-top: -5px;
+  transition: transform 120ms ease;
+}
+.caret-range::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+}
+.caret-range::-moz-range-track {
+  height: 3px;
+  background: #1f1f23;
+  border-radius: 3px;
+}
+.caret-range::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--caret-accent);
+  border: 2px solid #16161a;
+  cursor: pointer;
+}
+
+.monaco-editor .peekview-widget {
+  border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+.monaco-editor .peekview-widget .head {
+  border-bottom: 1px solid #1f1f23 !important;
+  padding: 4px 8px;
+}
+.monaco-editor .peekview-widget .head .peekview-title {
+  font-family: var(--caret-font-sans);
+  font-size: 12px;
+}
+.monaco-editor .peekview-widget .head .peekview-title .meta {
+  color: var(--caret-accent) !important;
+  opacity: 0.9;
+}
+.monaco-editor .peekview-widget .head .actions .codicon {
+  border-radius: 3px;
+  padding: 2px;
+}
+.monaco-editor .peekview-widget .head .actions .codicon:hover {
+  background: #1f1f23;
+}
+.monaco-editor .peekview-widget .body {
+  border-top: 1px solid #1f1f23 !important;
+}
+.monaco-editor .peekview-widget .tree {
+  font-family: var(--caret-font-sans);
+}
